@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="buySeed" xmlns="http://jbpm.org/4.0/jpdl">
+   <start g="122,11,48,48" name="start">
+      <transition g="-44,-10" name="fork" to="fork"/>
+   </start>
+   <fork g="118,75,48,48" name="fork">
+      <transition g="-108,-13" name="输入种子采购汇总表" to="种子采购汇总表"/>
+      <transition g="5,-17" name="输入合作社农户配料清单" to="合作社农户配料清单"/>
+   </fork>
+   <task assignee="cooperation" form="seedList.jsp" g="33,143,124,52" name="种子采购汇总表">
+      <transition g="-97,2" name="种子采购汇总表" to="join"/>
+   </task>
+   <task assignee="cooperation" form="farmerMaterialList.jsp" g="174,133,131,52" name="合作社农户配料清单">
+      <transition g="10,-1" name="合作社农户配料清单" to="join"/>
+   </task>
+   <join g="124,208,48,48" name="join">
+      <transition g="14,-8" name="join" to="汇总采购信息"/>
+   </join>
+   <task assignee="corporation" form="finalList.jsp" g="99,263,105,52" name="汇总采购信息">
+      <transition g="-108,-7" name="生成种子采购清单" to="种子采购清单"/>
+   </task>
+      <task assignee="corporation" form="seedFinalList.jsp" g="111,329,92,52" name="种子采购清单">
+      <transition g="-21,-18" name="清单审核" to="采购信息审核"/>
+   </task>
+   <task assignee="farmBureau" form="informationAudit.jsp" g="257,331,115,52" name="采购信息审核">
+      <transition g="-48,-14" name="审核通过" to="采购种子"/>
+      <transition g="-9,-21" name="调整采购信息" to="汇总采购信息"/>
+   </task>
+   <task assignee="farmBureau" form="buySeed.jsp" g="132,426,92,52" name="采购种子">
+      <transition g="-21,30" name="采购完成" to="发布种子领取通知"/>
+      <transition g="-6,-25" name="种子反馈" to="种子采购反馈单"/>
+      <transition g="-18,16" name=" 种子检验" to="种子检验报告"/>
+   </task>
+   <state g="-1,373,107,52" name="种子采购反馈单"/>
+   <state g="1,442,92,52" name="种子检验报告"/>
+   <task assignee="corporation" form="inform.jsp" g="264,424,145,52" name="发布种子领取通知">
+      <transition g="-23,29" name="通知农户" to="转发通知农户"/>
+   </task>
+   <task assignee="cooperation" form="informFarmer.jsp" g="454,421,103,52" name="转发通知农户">
+      <transition g="10,-8" name="确认并领取" to="确认并领取"/>
+   </task>
+   <task assignee="farmer" form="confirmAndReceive.jsp" g="459,516,92,52" name="确认并领取">
+      <transition name="end" to="end" g="-47,-17"/>
+   </task>
+   <end g="81,523,48,48" name="end"/>
+</process>

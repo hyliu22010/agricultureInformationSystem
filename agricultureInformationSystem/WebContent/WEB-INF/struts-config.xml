@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  
+  <form-beans>
+		<form-bean name="loginForm" type="user.loginForm"/>
+		<form-bean name="seedListForm" type="buySeedDao.seedListForm"/>
+		<form-bean name="materialListForm" type="buySeedDao.materialListForm"/>
+		<form-bean name="finalListForm" type="buySeedDao.finalListForm"/>
+	</form-beans>
+	<action-mappings>
+		<action name="seedListForm" attribute="seedListForm" path="/seedList" input="/buySeedUI/seedList.jsp" 
+				 scope="session" validate="false" type="buySeedDao.seedListAction" >
+			
+			<forward name="success" path="/buySeedUI/submit.jsp" contextRelative="true"/>
+			<forward name="failure" path="/failure.html" />
+		</action>
+		<action name="loginForm" attribute="loginForm" path="/login" input="/login.html" 
+				 scope="session" validate="false" type="user.loginAction">
+			
+			<forward name="success" path="/failure.html"/>
+			<forward name="failure" path="/failure.html"/>
+			<forward name="corporation" path="/user/corporation/corporationIndex.html" contextRelative="true"/>
+			<forward name="cooperation" path="/user/cooperation/cooperationIndex.html" contextRelative="true"/>
+			<forward name="farmBureau" path="/user/farmBureau/farmBureauIndex.html" contextRelative="true"/>
+			<forward name="farmer" path="/user/farmer/farmerIndex.html" contextRelative="true"/>
+		</action>
+		<action name="materialListForm" attribute="materialListForm" path="/materialList" input="/buySeedUI/farmerMaterialList.jsp" 
+				 scope="session" validate="false" type="buySeedDao.materialListAction" >
+			
+			<forward name="success" path="/buySeedUI/submit.jsp" contextRelative="true"/>
+			<forward name="failure" path="/failure.html" />
+		</action>
+		<action name="finalListForm" attribute="finalListForm" path="/finalList" input="/buySeedUI/finalList.jsp" 
+				 scope="session" validate="false" type="buySeedDao.finalListAction" >
+			
+			<forward name="success" path="/buySeedUI/submit.jsp" contextRelative="true"/>
+			<forward name="failure" path="/failure.html" />
+		</action>
+	</action-mappings>
+  
+
+</struts-config>
+

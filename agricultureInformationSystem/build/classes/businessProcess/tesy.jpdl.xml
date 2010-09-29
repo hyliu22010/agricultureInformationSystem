@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="tesy" xmlns="http://jbpm.org/4.0/jpdl">
+   <start g="172,13,48,48" name="start1">
+      <transition g="-62,-10" name="to fork1" to="fork1"/>
+   </start>
+   <fork g="177,88,48,48" name="fork1">
+      <transition g="-107,-17" name="to 种子采购汇总表" to="种子采购汇总表"/>
+      <transition g="7,-15" name="to 合作社农户配料清单" to="合作社农户配料清单"/>
+   </fork>
+   <task g="70,154,104,52" name="种子采购汇总表">
+      <transition g="-59,-8" name="to join1" to="join1"/>
+   </task>
+   <task g="208,153,136,52" name="合作社农户配料清单">
+      <transition g="11,-5" name="to join1" to="join1"/>
+   </task>
+   <join g="177,219,48,48" name="join1">
+      <transition name="to 汇总采购信息" to="汇总采购信息" g="-95,-17"/>
+   </join>
+   <task name="汇总采购信息" g="161,288,100,52">
+      <transition name="to 种子采购清单" to="种子采购清单" g="-95,-17"/>
+   </task>
+   <task name="种子采购清单" g="171,363,106,52">
+      <transition name="to 采购信息审核" to="采购信息审核" g="-61,-19"/>
+   </task>
+   <task name="采购信息审核" g="400,354,103,52">
+      <transition name="to 汇总采购信息" to="汇总采购信息" g="-20,-17"/>
+      <transition name="to 采购种子" to="采购种子" g="-51,-21"/>
+   </task>
+   <task name="采购种子" g="165,442,92,52">
+      <transition name="to 种子采购反馈单" to="种子采购反馈单" g="-23,-23"/>
+      <transition name="to 种子检验报告" to="种子检验报告" g="-18,10"/>
+      <transition name="to 发布种子领取通知" to="发布种子领取通知" g="-35,30"/>
+   </task>
+   <task name="种子采购反馈单" g="22,415,109,52"/>
+   <task name="种子检验报告" g="24,489,107,52"/>
+   <task name="发布种子领取通知" g="293,447,157,52">
+      <transition name="to 转发通知农户" to="转发通知农户" g="-53,-45"/>
+   </task>
+   <task name="转发通知农户" g="480,445,108,52">
+      <transition name="to 确认并领取" to="确认并领取" g="-47,-24"/>
+   </task>
+   <task name="确认并领取" g="673,438,92,52">
+      <transition name="to 确认身份" to="确认身份" g="-76,-7"/>
+   </task>
+   <task name="确认身份" g="679,521,92,52">
+      <transition name="to 发放种子" to="发放种子" g="-37,-16"/>
+   </task>
+   <task name="发放种子" g="511,518,92,52">
+      <transition name="to end1" to="end1" g="-9,-24"/>
+   </task>
+   <end name="end1" g="414,535,48,48"/>
+</process>

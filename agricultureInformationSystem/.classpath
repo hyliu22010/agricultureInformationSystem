@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v5.5">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/jbpm.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/activation.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/antlr-runtime.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/avalon-framework.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/bsh.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/cglib.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/drools-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/drools-compiler.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/drools-core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/errai-bus.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/errai-common.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/gson.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/guice.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/guice-aopalliance.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/guice-servlet.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/gwt-console-rpc.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/gwt-console-server-integration.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/janino.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-bpmn.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-console-form-plugin.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-console-graphView-plugin.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-console-integration.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-console-reports.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-db.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-examples-tests.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-jboss.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-test-db-tests.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jbpm-tomcat6.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/joda-time.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/jta.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/juel-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/juel-engine.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/juel-impl.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/junit.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/livetribe-jsr223.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/logkit.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/mail.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/mockejb.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/mockrunner.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/mvel2.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/mysql-connector-java.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/oro.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/postgresql.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/report-engine.zip"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/slf4j-jdk14.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/subethasmtp-smtp.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.4/lib/subethasmtp-wiser.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/jbpm.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/activation.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/ant.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/ant-launcher.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/avalon-framework.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/gson.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/gwt-console-rpc.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/gwt-console-server-integration.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/hibernate-cglib-repack.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/hibernate-core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/idm-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/idm-common.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/idm-core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/idm-hibernate.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/idm-spi.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbosscache-core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jboss-common-core.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jboss-j2ee.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jboss-logging-spi.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-console-form-plugin.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-console-graphView-plugin.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-console-integration.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-console-reports.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-jboss4.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-jboss5.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jbpm-spi.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jgroups.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jta.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/jtds.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/juel.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/juel-engine.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/juel-impl.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/junit.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/livetribe-jsr223.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/logkit.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/mail.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/mysql-connector-java.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/postgresql.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/report-engine.zip"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/slf4j-jdk14.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/slf4j-log4j12.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/standalone-compiler.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/stax-api.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/subethasmtp-smtp.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/subethasmtp-wiser.jar"/>
+	<classpathentry kind="lib" path="D:/My Documents/下载/jbpm-4.0/lib/xml-apis.jar"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_EM"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_CORE"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-3.0.17-ga-bin.jar"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.cross.easystruts.eclipse.STRUTS12_CONTAINER"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
