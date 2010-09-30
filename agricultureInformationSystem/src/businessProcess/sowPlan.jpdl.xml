@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="sowPlan" xmlns="http://jbpm.org/4.0/jpdl">
+   <start g="84,1,48,48" name="start1">
+      <transition to="制定季计划"/>
+   </start>
+   <task g="55,58,92,52" name="制定季计划" assignee="corporation">
+      <transition to="提交季计划"/>
+   </task>
+   <task g="49,117,92,52" name="提交季计划" assignee="corporation">
+      <transition to="审查季计划"/>
+   </task>
+   <task g="214,34,92,52" name="审查季计划" assignee="cooperation">
+      <transition to="exclusive1"/>
+   </task>
+   <decision g="231,90,48,48" name="exclusive1">
+      <transition to="修改季计划"/>
+      <transition g="411,203:" to="下达季计划"/>
+   </decision>
+   <task g="209,149,92,52" name="修改季计划" assignee="cooperation">
+      <transition to="exclusive2"/>
+   </task>
+   <task g="210,294,92,52" name="下达季计划" assignee="cooperation">
+      <transition to="fork1"/>
+   </task>
+   <task g="162,419,92,52" name="制定施肥计划" assignee="cooperation">
+      <transition to="修订进度计划"/>
+   </task>
+   <task g="261,417,92,52" name="制定杀虫计划" assignee="cooperation">
+      <transition to="修订进度计划"/>
+   </task>
+   <fork g="232,361,48,48" name="fork1">
+      <transition to="制定施肥计划"/>
+      <transition to="制定杀虫计划"/>
+   </fork>
+   <decision g="76,197,48,48" name="exclusive2">
+      <transition to="保留原计划"/>
+      <transition to="更新季计划"/>
+   </decision>
+   <task g="49,305,92,52" name="保留原计划" assignee="corporation">
+      <transition to="下达季计划"/>
+   </task>
+   <task g="212,206,92,52" name="更新季计划" assignee="cooperation">
+      <transition to="下达季计划"/>
+   </task>
+   <task g="198,486,92,52" name="修订进度计划" candidate-groups="cooperation">
+      <transition to="接收执行季计划"/>
+   </task>
+   <task g="317,488,115,52" name="接收执行季计划" assignee="farmer">
+      <transition to="汇总执行情况"/>
+   </task>
+   <task g="450,487,92,52" name="汇总执行情况" assignee="cooperation">
+      <transition to="end1"/>
+   </task>
+   <end g="564,488,48,48" name="end1"/>
+</process>
