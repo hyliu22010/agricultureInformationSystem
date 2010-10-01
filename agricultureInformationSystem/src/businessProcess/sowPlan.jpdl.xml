@@ -1,56 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <process name="sowPlan" xmlns="http://jbpm.org/4.0/jpdl">
-   <start g="84,1,48,48" name="start1">
-      <transition to="ÖÆ¶¨¼¾¼Æ»®"/>
+   <start g="114,0,48,48" name="start1">
+      <transition to="åˆ¶å®šå­£è®¡åˆ’"/>
    </start>
-   <task g="55,58,92,52" name="ÖÆ¶¨¼¾¼Æ»®" assignee="corporation">
-      <transition to="Ìá½»¼¾¼Æ»®"/>
+   <task g="91,51,92,52" name="åˆ¶å®šå­£è®¡åˆ’" assignee="corporation">
+      <transition to="æäº¤å­£è®¡åˆ’"/>
    </task>
-   <task g="49,117,92,52" name="Ìá½»¼¾¼Æ»®" assignee="corporation">
-      <transition to="Éó²é¼¾¼Æ»®"/>
+   <task g="92,107,92,52" name="æäº¤å­£è®¡åˆ’" assignee="corporation">
+      <transition to="å®¡æ ¸å­£è®¡åˆ’"/>
    </task>
-   <task g="214,34,92,52" name="Éó²é¼¾¼Æ»®" assignee="cooperation">
-      <transition to="exclusive1"/>
+   <task g="239,10,92,52" name="å®¡æ ¸å­£è®¡åˆ’" assignee="cooperation">
+      <transition g="-95,35" name="æ˜¯å¦éœ€è¦ä¿®æ”¹" to="exclusive1"/>
    </task>
-   <decision g="231,90,48,48" name="exclusive1">
-      <transition to="ÐÞ¸Ä¼¾¼Æ»®"/>
-      <transition g="411,203:" to="ÏÂ´ï¼¾¼Æ»®"/>
+   <decision g="261,71,48,48" name="exclusive1">
+      <transition g="-25,-6" name="æ˜¯" to="ä¿®æ”¹å­£è®¡åˆ’"/>
+      <transition g="425,168:17,-6" name="å¦" to="ä¸‹è¾¾å­£è®¡åˆ’"/>
    </decision>
-   <task g="209,149,92,52" name="ÐÞ¸Ä¼¾¼Æ»®" assignee="cooperation">
-      <transition to="exclusive2"/>
+   <task g="242,143,92,52" name="ä¿®æ”¹å­£è®¡åˆ’" assignee="cooperation">
+      <transition g="-40,-23" name="æ˜¯å¦åŒæ„ä¿®æ”¹" to="exclusive2"/>
    </task>
-   <task g="210,294,92,52" name="ÏÂ´ï¼¾¼Æ»®" assignee="cooperation">
-      <transition to="fork1"/>
+   <task g="240,244,92,52" name="ä¸‹è¾¾å­£è®¡åˆ’" assignee="cooperation">
+      <transition to="ä¿®è®¢è¿›åº¦è®¡åˆ’"/>
    </task>
-   <task g="162,419,92,52" name="ÖÆ¶¨Ê©·Ê¼Æ»®" assignee="cooperation">
-      <transition to="ÐÞ¶©½ø¶È¼Æ»®"/>
-   </task>
-   <task g="261,417,92,52" name="ÖÆ¶¨É±³æ¼Æ»®" assignee="cooperation">
-      <transition to="ÐÞ¶©½ø¶È¼Æ»®"/>
-   </task>
-   <fork g="232,361,48,48" name="fork1">
-      <transition to="ÖÆ¶¨Ê©·Ê¼Æ»®"/>
-      <transition to="ÖÆ¶¨É±³æ¼Æ»®"/>
-   </fork>
-   <decision g="76,197,48,48" name="exclusive2">
-      <transition to="±£ÁôÔ­¼Æ»®"/>
-      <transition to="¸üÐÂ¼¾¼Æ»®"/>
+   <decision g="101,171,48,48" name="exclusive2">
+      <transition name="å¦" to="ä¿ç•™åŽŸè®¡åˆ’" g="-23,-1"/>
+      <transition name="æ˜¯" to="æ›´æ–°å­£è®¡åˆ’" g="-16,13"/>
    </decision>
-   <task g="49,305,92,52" name="±£ÁôÔ­¼Æ»®" assignee="corporation">
-      <transition to="ÏÂ´ï¼¾¼Æ»®"/>
+   <task g="82,234,92,52" name="ä¿ç•™åŽŸè®¡åˆ’" assignee="corporation">
+      <transition to="ä¸‹è¾¾å­£è®¡åˆ’"/>
    </task>
-   <task g="212,206,92,52" name="¸üÐÂ¼¾¼Æ»®" assignee="cooperation">
-      <transition to="ÏÂ´ï¼¾¼Æ»®"/>
+   <task name="æ›´æ–°å­£è®¡åˆ’" g="243,190,92,52" assignee="cooperation"/>
+   <task name="ä¿®è®¢è¿›åº¦è®¡åˆ’" g="239,311,92,52" assignee="cooperation">
+      <transition to="æŽ¥æ”¶å­£è®¡åˆ’"/>
    </task>
-   <task g="198,486,92,52" name="ÐÞ¶©½ø¶È¼Æ»®" candidate-groups="cooperation">
-      <transition to="½ÓÊÕÖ´ÐÐ¼¾¼Æ»®"/>
+   <task name="æŽ¥æ”¶å­£è®¡åˆ’" g="463,231,92,52" assignee="farmer">
+      <transition to="æ‰§è¡Œå­£è®¡åˆ’"/>
    </task>
-   <task g="317,488,115,52" name="½ÓÊÕÖ´ÐÐ¼¾¼Æ»®" assignee="farmer">
-      <transition to="»ã×ÜÖ´ÐÐÇé¿ö"/>
+   <task name="æ‰§è¡Œå­£è®¡åˆ’" g="461,296,92,52" assignee="farmer">
+      <transition to="æ±‡æ€»æ‰§è¡Œæƒ…å†µ" g="503,399:"/>
    </task>
-   <task g="450,487,92,52" name="»ã×ÜÖ´ÐÐÇé¿ö" assignee="cooperation">
+   <task name="æ±‡æ€»æ‰§è¡Œæƒ…å†µ" g="238,371,92,52" assignee="cooperation">
       <transition to="end1"/>
    </task>
-   <end g="564,488,48,48" name="end1"/>
+   <end name="end1" g="99,374,48,48"/>
+
 </process>
