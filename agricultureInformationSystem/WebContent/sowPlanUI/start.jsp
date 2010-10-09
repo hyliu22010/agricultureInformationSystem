@@ -7,5 +7,5 @@
 	map.put("owner", session.getAttribute("username"));
 	executionService.startProcessInstanceById(request
 			.getParameter("id"), map);
-	response.sendRedirect("sowPlanManage.jsp");
+	response.sendRedirect("index.jsp");
 %>

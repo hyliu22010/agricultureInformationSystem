@@ -11,7 +11,7 @@ body {
 }
 -->
 </style>
-<%@ page language="java" import="java.util.*,org.jbpm.api.*,org.jbpm.api.task.*" pageEncoding="gb2312"%>
+<%@ page language="java" import="sowPlanDao.makePlanForm" pageEncoding="gb2312"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -29,15 +29,11 @@ body {
 
   </head>
   <% 
-	ProcessEngine processEngine=Configuration.getProcessEngine();
-	RepositoryService repositoryService = processEngine.getRepositoryService();
-	ExecutionService executionService = processEngine.getExecutionService();
-	TaskService taskService = processEngine.getTaskService();
-	String username = (String) session.getAttribute("identity");
-	List<ProcessDefinition> pdList = repositoryService.createProcessDefinitionQuery().list();
-	List<ProcessInstance> piList = executionService.createProcessInstanceQuery().list();
-	List<Task> taskList = taskService.findPersonalTasks(username);
-%>
+	  makePlanForm mp=new makePlanForm();
+	  makePlanForm[] mpa=new makePlanForm[1000];
+	  mpa=mp.getSowPlan();
+	  request.setAttribute("taskId",request.getParameter("id"));
+  %>
   <body>
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
@@ -55,35 +51,32 @@ body {
     <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td colspan="2" valign="top"><span class="left_bt">		
-        <br>&nbsp;<a href="deploy.jsp?">创建水稻播种计划</a>
+        <br><a href="deploy.jsp?"></a>
         <table border="1" width="100%">
       <caption>当前的播种计划</caption>
       <thead>
         <tr>
-          <td>id</td>
-          <td>name</td>
-          <td>version</td>
+          <td>planId</td>
+          <td>baseName</td>
+          <td>state</td>
           <td>operation</td>
         </tr>
       </thead>
       <tbody>
 <%
-	for (ProcessDefinition pd : pdList) {
-		if(pd.getName().equals("sowPlan")){
+	for (int count=0;mpa[count]!=null;count++) {
+		
 %>
 	    <tr>
-	      <td><%=pd.getId() %></td>
-	      <td><%=pd.getName() %></td>
-	      <td><%=pd.getVersion() %></td>
+	      <td><%=mpa[count].getplanId() %> </td>
+	      <td><%=mpa[count].getbaseName() %></td>
+	      <td><%=mpa[count].getisSubmit() %></td>
 	      <td>
-	        <a href="remove.jsp?id=<%=pd.getDeploymentId() %>">remove</a>
-	        &nbsp;|&nbsp;
-	        <a href="start.jsp?id=<%=pd.getId() %>">start</a>
+	        <a href="completePlan.jsp?taskId=<%=request.getParameter("id")%>&planId=<%=mpa[count].getplanId()%>">submit</a>
 	      </td>
 	    </tr>
 <%
 		}
-	}
 %>
 	  </tbody>
 	</table> 

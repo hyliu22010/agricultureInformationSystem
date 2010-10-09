@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="buyRice" xmlns="http://jbpm.org/4.0/jpdl">
+   <start g="107,10,48,48" name="start1"/>
+   <task g="83,81,92,52" name="农户土地清单"/>
+</process>

@@ -1,6 +1,8 @@
 package sowPlanDao;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +12,7 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -17,6 +20,7 @@ import org.hibernate.cfg.Configuration;
 
 import buySeedDao.finalList;
 import buySeedDao.finalListForm;
+import buySeedDao.materialList;
 
 
 
@@ -47,13 +51,4 @@ public class makePlanAction extends Action {
 				}
 				return (mapping.findForward(target));
 			}
-	public makePlanForm getSowPlan(){
-		makePlanForm makePlan=new makePlanForm();
-		Configuration cfg=new Configuration().configure();
-        SessionFactory sf =cfg.buildSessionFactory();
-        Session session = sf.openSession();
-		Transaction tx = session.beginTransaction();
-		
-		return makePlan;
-	}
 }

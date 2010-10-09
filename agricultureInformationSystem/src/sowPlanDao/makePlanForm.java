@@ -1,6 +1,14 @@
 package sowPlanDao;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.apache.struts.action.ActionForm;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 public class makePlanForm extends ActionForm{
 	private String taskId;
@@ -25,6 +33,7 @@ public class makePlanForm extends ActionForm{
 	private String reap;
 	private boolean isSubmit; 
 	private boolean isComplete;
+	private String suggest;
 	public String gettaskId(){
 		return taskId;
 	}
@@ -156,5 +165,73 @@ public class makePlanForm extends ActionForm{
 	}
 	public void setisComplete(boolean isComplete){
 		this.isComplete=isComplete;
+	}
+	public String getsuggest(){
+		return suggest;
+	}
+	public void setsuggest(String suggest){
+		this.suggest=suggest;
+	}
+	public makePlanForm[] getSowPlan(){
+		int count=0;
+		makePlanForm makePlan[]=new makePlanForm[1000];
+		Configuration cfg=new Configuration().configure();
+        SessionFactory sf =cfg.buildSessionFactory();
+        Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		Query q = session.createQuery("from makePlanForm c ") ;
+		tx.commit();
+		List l = q.list() ;
+		Iterator iter = l.iterator() ;
+		while(iter.hasNext()){
+			makePlan[count] = new makePlanForm();
+			makePlan[count] =(makePlanForm)iter.next() ;
+			count++;
+			}
+		return makePlan;
+	}
+	public void updateSowPlan(String planId){
+		makePlanForm makePlan = new makePlanForm();
+		Configuration cfg=new Configuration().configure();
+        SessionFactory sf =cfg.buildSessionFactory();
+        Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		Query q = session.createQuery("from makePlanForm c where c.planId='" + planId+ "'") ;
+		tx.commit();
+		List l = q.list() ;
+		Iterator iter = l.iterator() ;
+		makePlan=(makePlanForm)iter.next() ;
+		makePlan.setisSubmit(true);
+		Configuration cfg1=new Configuration().configure();
+        SessionFactory sf1 =cfg.buildSessionFactory();
+        Session session1 = sf.openSession();
+		Transaction tx1 = session.beginTransaction();
+		session1.update(makePlan);
+		tx1.commit();	
+	}
+	public makePlanForm getAuditPlan(){
+		makePlanForm makePlan = new makePlanForm();
+		Configuration cfg=new Configuration().configure();
+        SessionFactory sf =cfg.buildSessionFactory();
+        Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		Query q = session.createQuery("from makePlanForm c where c.isSubmit=true and c.isComplete=false") ;
+		tx.commit();
+		List l = q.list() ;
+		Iterator iter = l.iterator() ;
+		makePlan=(makePlanForm)iter.next() ;
+		return makePlan;
+	}
+	public void update(makePlanForm mp){
+		Configuration cfg=new Configuration().configure();
+        SessionFactory sf =cfg.buildSessionFactory();
+        Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		session.update(mp);
+		tx.commit();
+	}
+	public static void main(String[] args){
+		makePlanForm makePlan = new makePlanForm();
+		makePlan=makePlan.getAuditPlan();
 	}
 }

@@ -26,6 +26,7 @@
         <property name="reap" column="reap" />
         <property name="isSubmit" column="isSubmit" />
         <property name="isComplete" column="isComplete" />
+        <property name="suggest" column="suggest" />
     </class>
         
 </hibernate-mapping>

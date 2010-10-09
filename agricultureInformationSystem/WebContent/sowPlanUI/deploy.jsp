@@ -9,5 +9,5 @@
 	//		.getResourceAsStream("/leave.zip"));
 	//repositoryService.createDeployment()
 	//		.addResourcesFromZipInputStream(zis).deploy();
-	response.sendRedirect("sowPlanManage.jsp");
+	response.sendRedirect("index.jsp");
 %>

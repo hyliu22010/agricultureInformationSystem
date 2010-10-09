@@ -4,5 +4,5 @@
 	RepositoryService repositoryService = processEngine.getRepositoryService();
 
 	repositoryService.deleteDeploymentCascade(request.getParameter("id"));
-	response.sendRedirect("sowPlanManage.jsp");
+	response.sendRedirect("index.jsp");
 %>

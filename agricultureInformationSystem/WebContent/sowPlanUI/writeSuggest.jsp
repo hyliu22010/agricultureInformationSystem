@@ -1,5 +1,6 @@
 <link href="../images/skin.css" rel="stylesheet" type="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /><style type="text/css">
+<meta http-equiv="Content-Type"contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" /><style type="text/css">
 <!--
 body {
 	margin-left: 0px;
@@ -16,7 +17,7 @@ body {
 	request.setAttribute("taskId",taskId);
 %>
 
-<%@ page language="java" pageEncoding="gb2312"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
@@ -47,7 +48,7 @@ body {
     <td width="17" valign="top" background="../images/mail_leftbg.gif"><img src="../images/left-top-right.gif" width="17" height="29" /></td>
     <td valign="top" background="../images/content-bg.gif"><table width="100%" height="31" border="0" cellpadding="0" cellspacing="0" class="left_topbg" id="table2">
       <tr>
-        <td height="31"><div class="titlebt">欢迎界面</div></td>
+        <td height="31"><div class="titlebt">娆㈣繋鐣岄潰</div></td>
       </tr>
     </table></td>
     <td width="16" valign="top" background="../images/mail_rightbg.gif"><img src="../images/nav-right-bg.gif" width="16" height="29" /></td>
@@ -58,30 +59,15 @@ body {
     <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td colspan="2" valign="top"><span class="left_bt"> 
-        <br><br>创建播种计划： 
-        <html:form method="post" action="makePlan.do">
-		<br>播种计划编号：<html:text  property="planId"></html:text>
-		任务编号：<input type="text" name="taskId" value="<%=taskId%>">
-		<br><br>基地名称：<html:text  property="baseName"></html:text>
-    	地块编号：<html:text  property="soilName"></html:text>
-    	地块面积：<html:text  property="soilArea"></html:text><br><br>
-    	品种名称：<html:text  property="varietyName"></html:text>
-    	种子来源：<html:text  property="seedOrigin"></html:text>
-    	播种时间：<html:text  property="seedTime"></html:text><br><br>
-    	种植人姓名：<html:text  property="farmerName"></html:text>
-    	记录时间：<html:text  property="recordTime"></html:text><br><br>
-    	项目：<html:text  property="project"></html:text><br><br>
-    	晒谷种：<html:text  property="sgz" size="82"></html:text><br><br>
-    	秧田备耕：<html:text  property="ytbg" size="82"></html:text><br><br>
-    	浸种催芽：<html:text  property="jzcy" size="82"></html:text><br><br>
-    	播种时间：<html:text  property="bzsj" size="82"></html:text><br><br>
-    	大田备耕：<html:text  property="dtbg" size="82"></html:text><br><br>
-    	秧田插秧：<html:text  property="ytcy" size="82"></html:text><br><br>
-    	分蘖施肥：<html:text  property="fnsf" size="82"></html:text><br><br>
-    	病虫防治：<html:text  property="bcfz" size="82"></html:text><br><br>
-    	收割：<html:text  property="reap" size="82"></html:text><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    	<html:submit  value="提交"></html:submit>
-    	</html:form>
+        <br>&nbsp; 
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 淇敼鎰忚锛�  
+        <form method="post" action="submitSuggest.jsp">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+		<textarea name="suggest" rows="10" cols="50"  ></textarea><br><span class="left_bt">
+		<input type="hidden" value="<%=taskId %>" name="taskId">
+		</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <input type="submit" name="result"  value="鎻愪氦" type="submit">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    	
+    	</form>
         <br><br><br><br><br><br><br><br><br><br><br></span>     
       </tr>
     </table>

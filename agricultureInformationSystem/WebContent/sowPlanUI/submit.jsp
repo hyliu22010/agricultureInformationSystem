@@ -8,7 +8,7 @@
 	TaskService taskService = processEngine.getTaskService();
 	String taskId = request.getParameter("taskId");
 	taskService.completeTask(taskId);
-	response.sendRedirect("/agricultureInformationSystem/buySeedUI/index.jsp");
+	response.sendRedirect("/agricultureInformationSystem/sowPlanUI/index.jsp");
 %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

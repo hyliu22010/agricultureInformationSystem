@@ -11,8 +11,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import sowPlanDao.makePlanForm;
+
 public class test {
 	public static void main(String argv[]){
+		/*
 		String username="user";
 		String password="user";
 		userInfoDao us=new userInfoDao();
@@ -24,7 +27,7 @@ public class test {
 			     "from userInfoDao u where u.username='" + username
 			       + "' and u.password='" + password + "'").uniqueResult();
 			     System.out.println(user.getIdentity());
-		*/
+		
 	    Query q=session.createQuery("from userInfoDao u ");
 		tx.commit();	
 		List list = q.list();
@@ -34,6 +37,14 @@ public class test {
 			String identity;				    
 			identity=us.getIdentity();	
 			System.out.println(us.getIdentity()+"\n"+us.getUsername());
+		}*/
+		makePlanForm mp=new makePlanForm();
+		makePlanForm[] mpa=new makePlanForm[1000];
+		mpa=mp.getSowPlan();
+		for(int count=0;mpa[count]!=null;count++){
+		
+		System.out.println(mpa[count].getplanId()+" "+count);
 		}
+			
 	}
 }
