@@ -17,6 +17,7 @@
     	<mapping resource="buySeedDao/seedList.hbm.xml"/>
     	<mapping resource="buySeedDao/materialList.hbm.xml"/>
     	<mapping resource="buySeedDao/finalList.hbm.xml"/>
+    	<mapping resource="sowPlanDao/makePlan.hbm.xml"/>
     </session-factory>
 
 

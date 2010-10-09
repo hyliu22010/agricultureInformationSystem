@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<process name="buySeed" xmlns="http://jbpm.org/4.0/jpdl">
+<process name="buySeed" xmlns="http://jbpm.org/4.0/jpdl" key="buySeed" version="1">
    <start g="122,11,48,48" name="start">
       <transition g="-44,-10" name="fork" to="fork"/>
    </start>
@@ -41,7 +41,7 @@
       <transition g="10,-8" name="确认并领取" to="确认并领取"/>
    </task>
    <task assignee="farmer" form="confirmAndReceive.jsp" g="459,516,92,52" name="确认并领取">
-      <transition name="end" to="end" g="-47,-17"/>
+      <transition g="-47,-17" name="end" to="end"/>
    </task>
    <end g="81,523,48,48" name="end"/>
 </process>

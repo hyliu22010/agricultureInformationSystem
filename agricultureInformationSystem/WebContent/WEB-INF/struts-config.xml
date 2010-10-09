@@ -8,6 +8,7 @@
 		<form-bean name="seedListForm" type="buySeedDao.seedListForm"/>
 		<form-bean name="materialListForm" type="buySeedDao.materialListForm"/>
 		<form-bean name="finalListForm" type="buySeedDao.finalListForm"/>
+		<form-bean name="makePlanForm" type="sowPlanDao.makePlanForm"/>
 	</form-beans>
 	<action-mappings>
 		<action name="seedListForm" attribute="seedListForm" path="/seedList" input="/buySeedUI/seedList.jsp" 
@@ -36,6 +37,13 @@
 				 scope="session" validate="false" type="buySeedDao.finalListAction" >
 			
 			<forward name="success" path="/buySeedUI/submit.jsp" contextRelative="true"/>
+			<forward name="failure" path="/failure.html" />
+		</action>
+		
+		<action name="makePlanForm" attribute="makePlanForm" path="/makePlan" input="/sowPlanUI/makePlan.jsp" 
+				 scope="session" validate="false" type="sowPlanDao.makePlanAction" >
+			
+			<forward name="success" path="/sowPlanUI/submit.jsp" contextRelative="true"/>
 			<forward name="failure" path="/failure.html" />
 		</action>
 	</action-mappings>

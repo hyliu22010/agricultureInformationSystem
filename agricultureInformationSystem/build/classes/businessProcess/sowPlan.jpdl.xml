@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<process name="sowPlan" xmlns="http://jbpm.org/4.0/jpdl">
+<process name="sowPlan" xmlns="http://jbpm.org/4.0/jpdl" key="sowPlan" version="1">
    <start g="114,0,48,48" name="start1">
       <transition to="制定季计划"/>
    </start>
-   <task g="91,51,92,52" name="制定季计划" assignee="corporation">
+   <task g="91,51,92,52" name="制定季计划" assignee="corporation" form="makePlan.jsp">
       <transition to="提交季计划"/>
    </task>
    <task g="92,107,92,52" name="提交季计划" assignee="corporation">
       <transition to="审核季计划"/>
    </task>
    <task g="239,10,92,52" name="审核季计划" assignee="cooperation">
-      <transition g="-95,35" name="是否需要修改" to="exclusive1"/>
+      <transition name="需要修改" to="修改季计划" g="-55,-2"/>
+      <transition name="不需修改" to="下达季计划" g="442,192:-83,-17"/>
    </task>
-   <decision g="261,71,48,48" name="exclusive1">
-      <transition g="-25,-6" name="是" to="修改季计划"/>
-      <transition g="425,168:17,-6" name="否" to="下达季计划"/>
-   </decision>
    <task g="242,143,92,52" name="修改季计划" assignee="cooperation">
-      <transition g="-40,-23" name="是否同意修改" to="exclusive2"/>
+      <transition to="接收修改意见"/>
    </task>
-   <task g="240,244,92,52" name="下达季计划" assignee="cooperation">
+   <task g="240,251,92,52" name="下达季计划" assignee="cooperation">
       <transition to="修订进度计划"/>
    </task>
-   <decision g="101,171,48,48" name="exclusive2">
-      <transition name="否" to="保留原计划" g="-23,-1"/>
-      <transition name="是" to="更新季计划" g="-16,13"/>
-   </decision>
-   <task g="82,234,92,52" name="保留原计划" assignee="corporation">
+   <task g="92,246,92,52" name="保留原计划" assignee="corporation">
       <transition to="下达季计划"/>
    </task>
-   <task name="更新季计划" g="243,190,92,52" assignee="cooperation"/>
+   <task name="更新季计划" g="243,190,92,52" assignee="cooperation">
+      <transition to="下达季计划"/>
+   </task>
    <task name="修订进度计划" g="239,311,92,52" assignee="cooperation">
       <transition to="接收季计划"/>
    </task>
@@ -44,5 +39,9 @@
       <transition to="end1"/>
    </task>
    <end name="end1" g="99,374,48,48"/>
+   <task name="接收修改意见" g="90,180,92,52">
+      <transition name="否" to="保留原计划" g="-24,-3"/>
+      <transition name="是" to="更新季计划" g="-8,9"/>
+   </task>
 
 </process>

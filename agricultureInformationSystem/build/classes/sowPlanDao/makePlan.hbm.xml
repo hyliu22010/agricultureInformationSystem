@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+        <class name="sowPlanDao.makePlanForm" table="sowPlan">
+        <id name="planId" column="planId">
+        </id>
+        <property name="baseName" column="baseName" />
+        <property name="soilName" column="soilName" />
+        <property name="soilArea" column="soilArea" />
+        <property name="varietyName" column="varietyName" />
+        <property name="seedOrigin" column="seedOrigin" />
+        <property name="seedTime" column="seedTime" />
+        <property name="farmerName" column="farmerName" />
+        <property name="recordTime" column="recordTime" />
+        <property name="project" column="project" />
+        <property name="sgz" column="sgz" />
+        <property name="ytbg" column="ytbg" />
+        <property name="jzcy" column="jzcy" />
+        <property name="bzsj" column="bzsj" />
+        <property name="dtbg" column="dtbg" />
+        <property name="ytcy" column="ytcy" />
+        <property name="fnsf" column="fnsf" />
+        <property name="bcfz" column="bcfz" />
+        <property name="reap" column="reap" />
+        <property name="isSubmit" column="isSubmit" />
+        <property name="isComplete" column="isComplete" />
+    </class>
+        
+</hibernate-mapping>

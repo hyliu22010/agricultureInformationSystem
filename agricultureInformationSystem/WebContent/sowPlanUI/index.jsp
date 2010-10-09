@@ -12,7 +12,6 @@ body {
 </style>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="/buySeedUI/checkLogin.jsp" %>
 <%@page import="java.util.*,org.jbpm.api.*,org.jbpm.api.task.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -49,16 +48,16 @@ body {
 	if(username.equals("corporation")){
 %>
 
- <a href="deploy.jsp?" color="red">创建农产品采购任务</a>
+ <a href="deploy.jsp?">创建水稻播种计划</a>
  <%}
 	else{
 	%>
-	农产品采购任务
+	水稻播种计划
 	<% }%>
  &nbsp;[username: <%=username %>]
 
     <table border="1" width="100%">
-      <caption>当前的采购计划</caption>
+      <caption>当前的播种计划</caption>
       <thead>
         <tr>
           <td>id</td>
@@ -70,7 +69,7 @@ body {
       <tbody>
 <%
 	for (ProcessDefinition pd : pdList) {
-		if(pd.getName().equals("buySeed")){
+		if(pd.getName().equals("sowPlan")){
 %>
 	    <tr>
 	      <td><%=pd.getId() %></td>
@@ -102,12 +101,12 @@ body {
 <%
 
 	for (ProcessInstance pi : piList) {
-		if(pi.getProcessDefinitionId().equals("buySeed-1")){
+		if(pi.getProcessDefinitionId().equals("sowPlan-1")){
 %>
 	    <tr>
 	      <td><%=pi.getId() %></td>
 	      <td><%=pi.findActiveActivityNames() %></td>
-	      <td><%=pi.getProcessDefinitionId() %></td>
+	      <td><%=pi.getState() %></td>
 	      
 	    </tr>
 <%
@@ -129,7 +128,7 @@ body {
       <tbody>
 <%
 	for (Task task : taskList) {
-		if(task.getExecutionId().contains("buySeed")){
+		if(task.getExecutionId().contains("sowPlan")){
 %>
 	    <tr>
 	      <td><%=task.getId() %></td>
@@ -137,7 +136,7 @@ body {
 	      <td><a href="<%=task.getFormResourceName() %>?id=<%=task.getId() %>">view</a></td>
 	    </tr>
 <%
-	}
+		}
 	}
 %>
 	  </tbody>
